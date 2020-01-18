@@ -6,6 +6,8 @@ import { QuestionService } from 'src/app/services/question/question.service';
 import * as M from '../../app.models';
 import { formGroupNameProvider } from '@angular/forms/src/directives/reactive_directives/form_group_name';
 
+
+
 @Component({
   selector: 'app-test',
   templateUrl: './test.component.html',
@@ -26,7 +28,7 @@ export class TestComponent implements OnInit {
 
   ngOnInit() {
     this.questionService.getAllSubjects().subscribe((subjects: M.Subject[]) => {
-      
+
       this.currentTest = this.testService.getCurrentTest();
       this.user = this.userService.getCurrentUser();
       this.subjects = subjects;
